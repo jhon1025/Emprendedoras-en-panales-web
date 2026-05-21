@@ -1,0 +1,58 @@
+---
+const articulos = [
+  {
+    imagen: '/lecturalenta1.png',
+    categoria: 'Negocios',
+    categoriaColor: '#E75F24',
+    titulo: 'Desmintiendo mitos sobre emprender',
+  },
+  {
+    imagen: '/lecturalenta2.png',
+    categoria: 'Productividad',
+    categoriaColor: '#5BAD5E',
+    titulo: '5 Hacks para organizar tu agenda entre tomas',
+  },
+  {
+    imagen: '/lecturalenta3.png',
+    categoria: 'Maternidad',
+    categoriaColor: '#6A3A9F',
+    titulo: 'Tips para tener tu maternidad controlada',
+  },
+];
+---
+<section class="bg-white py-10 px-5">
+  <span class="text-xs text-gray-400 font-sans uppercase tracking-widest">Contenido Exclusivo</span>
+
+  <h2 class="font-bold text-4xl text-black mt-1 mb-3 font-sans leading-tight">
+    Lecturas
+    <span class="relative inline-block">
+      lentas
+      <span class="absolute left-0 -bottom-1 w-full h-[3px] bg-[#E75F24] rounded-full"></span>
+    </span>
+  </h2>
+
+  <p class="text-gray-500 text-sm font-display leading-relaxed mb-8 mt-4">
+    Artículos para <span class="text-black font-semibold">leer con calma</span> cuando el bebé
+    por fin se durmió, el café sigue caliente y necesitas algo más que otro reel de 30 segundos.
+  </p>
+
+  <div class="space-y-6">
+    {articulos.map((art) => (
+      <div class="rounded-2xl overflow-hidden shadow-md border border-gray-100">
+        <img src={art.imagen} alt={art.titulo} class="w-full h-48 object-cover" />
+        <div class="p-4 bg-white">
+          <span
+            class="inline-block text-white text-xs font-bold px-3 py-1 rounded-full mb-3 font-sans"
+            style={`background-color: ${art.categoriaColor}`}
+          >
+            {art.categoria}
+          </span>
+          <h3 class="font-bold text-base text-black mb-3 font-sans leading-snug">{art.titulo}</h3>
+          <a href="#" class="text-[#E75F24] text-sm font-display underline underline-offset-2">
+            Leer artículo
+          </a>
+        </div>
+      </div>
+    ))}
+  </div>
+</section>

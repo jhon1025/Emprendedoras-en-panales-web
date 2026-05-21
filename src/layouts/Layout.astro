@@ -1,17 +1,19 @@
 ---
-// Archivo: src/layouts/Layout.astro
-import '../styles/fonts.css'; // <-- AÑADE ESTA LÍNEA
+import '../styles/fonts.css';
 
+interface Props {
+  title?: string;
+}
+const { title = 'Emprendedoras en pañales' } = Astro.props;
 ---
 <!doctype html>
 <html lang="es">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width" />
-    <title>Emprendedoras en pañales</title>
-     
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{title}</title>
   </head>
-  <body >
+  <body>
     <slot />
   </body>
 </html>
