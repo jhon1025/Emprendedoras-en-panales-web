@@ -1,32 +1,51 @@
 ---
 const invitadas = [
-  { nombre: 'Natalia Castillo', foto: '/Natalia_Castillo.png' },
-  { nombre: 'Mari Manotas', foto: '/Mari_Manotas.png' },
-  { nombre: 'Lucia Aldana', descripcion: 'Influencer conocida por ser "Hija de Dios"', foto: '/Lucia_Aldana.png' },
+  { nombre: 'Natalia Castillo', foto: '/Natalia_Castillo.png', posicion: 'object-bottom', nube: '/nuberosada.png', tamanoNube: 'w-72 h-72', topNube: '-top-12', leftNube: 'left-1/2 -translate-x-1/2' },
+  { nombre: 'Mari Manotas', foto: '/Mari_Manotas.png', posicion: 'object-bottom', nube: '/nubenaranja.png', tamanoNube: 'w-72 h-72', topNube: '-top-16', leftNube: 'left-1/2 -translate-x-1/2' },
+  { nombre: 'Lucia Aldana', descripcion: 'Influencer conocida por ser "Hija de Dios"', foto: '/Lucia_Aldana.png', posicion: 'object-bottom', nube: '/nubemorada.png', tamanoNube: 'w-72 h-72', topNube: '-top-12', leftNube: 'left-[57%] -translate-x-1/2' },
 ];
 ---
 <section class="bg-[#E75F24] py-10 px-5 relative overflow-hidden">
-  <svg class="absolute top-0 left-0 w-full" viewBox="0 0 390 32" preserveAspectRatio="none" fill="#6A3A9F">
-    <path d="M0,0 Q60,32 130,18 Q200,4 260,22 Q320,36 390,12 L390,0 Z"/>
-  </svg>
+<img
+    src="/lineaverde.png"
+    alt=""
+    aria-hidden="true"
+    class="absolute left-0 top-0 h-full w-16 object-cover object-left pointer-events-none z-0"
+  />
 
-  <h2 class="font-bold text-4xl text-white mt-6 mb-8 font-sans leading-tight">
+  <img
+    src="/estrellablanca.png"
+    alt=""
+    aria-hidden="true"
+    class="absolute top-8 right-4 w-16 h-16 object-contain z-10"
+  />
+
+  <h2 class="font-bold text-4xl text-white mb-8 font-sans leading-tight relative z-10">
     Invitadas que <span class="text-[#FAED37]">inspiran</span>
   </h2>
 
-  <div class="space-y-6">
+  <div class="space-y-6 relative z-10">
     {invitadas.map((inv) => (
       <div class="bg-white rounded-2xl overflow-hidden shadow-lg">
-        <img
-          src={inv.foto}
-          alt={inv.nombre}
-          class="w-full h-72 object-cover object-top mix-blend-multiply"
-        />
-        <div class="px-4 py-4 bg-white">
-          <h3 class="font-bold text-lg text-black font-sans">{inv.nombre}</h3>
-          {inv.descripcion && (
-            <p class="text-gray-500 text-sm font-display mt-1">{inv.descripcion}</p>
-          )}
+        <div class="relative h-96">
+          <img
+            src={inv.nube}
+            alt=""
+            aria-hidden="true"
+            class={`absolute object-contain mix-blend-multiply z-0 ${inv.tamanoNube} ${inv.topNube} ${inv.leftNube}`}
+          />
+          <img
+            src={inv.foto}
+            alt={inv.nombre}
+            class={`absolute inset-0 w-full h-full object-cover z-10 ${inv.posicion}`}
+          />
+          <div class="absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-pink-400 to-transparent z-20 pointer-events-none"></div>
+          <div class="absolute bottom-8 left-4 z-30 px-4 py-3">
+            <h3 class="font-bold text-2xl text-white font-sans drop-shadow-md">{inv.nombre}</h3>
+            {inv.descripcion && (
+              <p class="text-white/80 text-sm font-display drop-shadow-md">{inv.descripcion}</p>
+            )}
+          </div>
         </div>
       </div>
     ))}

@@ -21,9 +21,9 @@ const articulos = [
 ];
 ---
 <section class="bg-white py-10 px-5">
-  <span class="text-xs text-gray-400 font-sans uppercase tracking-widest">Contenido Exclusivo</span>
+  <span class="text-xs text-[#EB6024] font-sans uppercase tracking-widest block text-center">Contenido Exclusivo</span>
 
-  <h2 class="font-bold text-4xl text-black mt-1 mb-3 font-sans leading-tight">
+  <h2 class="font-bold text-4xl text-[#945DA7] mt-1 mb-3 font-sans leading-tight text-center">
     Lecturas
     <span class="relative inline-block">
       lentas
@@ -31,7 +31,7 @@ const articulos = [
     </span>
   </h2>
 
-  <p class="text-gray-500 text-sm font-display leading-relaxed mb-8 mt-4">
+  <p class="text-[#EB6024] text-sm font-display leading-relaxed mb-8 mt-4 text-center">
     Artículos para <span class="text-black font-semibold">leer con calma</span> cuando el bebé
     por fin se durmió, el café sigue caliente y necesitas algo más que otro reel de 30 segundos.
   </p>
@@ -40,15 +40,15 @@ const articulos = [
     {articulos.map((art) => (
       <div class="rounded-2xl overflow-hidden shadow-md border border-gray-100">
         <img src={art.imagen} alt={art.titulo} class="w-full h-48 object-cover" />
-        <div class="p-4 bg-white">
+        <div class="p-4 bg-[#945DA7]">
           <span
             class="inline-block text-white text-xs font-bold px-3 py-1 rounded-full mb-3 font-sans"
             style={`background-color: ${art.categoriaColor}`}
           >
             {art.categoria}
           </span>
-          <h3 class="font-bold text-base text-black mb-3 font-sans leading-snug">{art.titulo}</h3>
-          <a href="#" class="text-[#E75F24] text-sm font-display underline underline-offset-2">
+          <h3 class="font-bold text-base text-white mb-3 font-display leading-snug">{art.titulo}</h3>
+          <a href="#" class="text-white text-sm font-display underline underline-offset-2">
             Leer artículo
           </a>
         </div>
