@@ -14,7 +14,8 @@
     </div>
   </div>
 
-  <nav class="bg-[#E75F24] py-2 px-4 flex items-center justify-between">
+  <!-- Móvil -->
+  <nav class="bg-[#E75F24] py-2 px-4 flex items-center justify-between lg:hidden">
     <button class="flex flex-col gap-1.5 p-1" aria-label="Abrir menú">
       <span class="block w-6 h-0.5 bg-white rounded"></span>
       <span class="block w-6 h-0.5 bg-white rounded"></span>
@@ -22,5 +23,20 @@
     </button>
     <img src="/logo_emprendedoras_en_panales.svg" alt="Emprendedoras en Pañales" class="h-14 w-auto" />
     <div class="w-8"></div>
+  </nav>
+
+  <!-- Desktop -->
+  <nav class="hidden lg:grid bg-[#E75F24] py-5 px-10 items-center" style="grid-template-columns: 1fr 200px 1fr;">
+    <div class="flex items-center justify-end gap-16 text-white font-sans font-semibold text-lg">
+      <a href="#" class="hover:text-white/80 transition-colors">Home</a>
+      <a href="#" class="hover:text-white/80 transition-colors">Patrocinadores</a>
+    </div>
+    <div class="flex justify-center">
+      <img src="/logo_emprendedoras_en_panales.svg" alt="Emprendedoras en Pañales" class="h-14 w-auto" />
+    </div>
+    <div class="flex items-center justify-start gap-16 text-white font-sans font-semibold text-lg">
+      <a href="#" class="hover:text-white/80 transition-colors">Conéctanos tu Historia</a>
+      <a href="#" class="hover:text-white/80 transition-colors">Blog</a>
+    </div>
   </nav>
 </header>

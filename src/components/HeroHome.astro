@@ -1,75 +1,73 @@
 ---
 ---
 <section class="bg-white relative overflow-hidden">
-  <div class="px-5 pt-8 pb-6 text-center">
 
-    <span class="inline-block bg-[#6A3A9F] text-white text-xs font-bold px-3 py-1 rounded mb-5 font-sans tracking-wide">
-      Podcast + Comunidad
-    </span>
+  <!-- Texto superior -->
+  <div class="px-5 pt-8 pb-6 text-center lg:pt-16 lg:pb-8 lg:max-w-5xl lg:mx-auto">
 
-    <h1 class="font-bold text-[2.6rem] leading-[1.1] mb-5 text-black font-sans">
-      Eres <em class="text-[#E75F24] not-italic">mamá.</em> Eres
-      <span class="text-[#6A3A9F]">emprendedora.</span> Aquí no tienes que elegir.
+    <div class="lg:text-left">
+      <span class="inline-block bg-[#6A3A9F] text-white text-xs font-bold px-3 py-1 rounded mb-5 font-sans tracking-wide lg:text-xl lg:px-10 lg:py-4 lg:-rotate-12">
+        Podcast + Comunidad
+      </span>
+    </div>
+
+    <h1 class="font-bold text-[2.6rem] leading-[1.1] mb-5 text-black font-sans lg:text-[4rem]">
+      Eres <em class="text-[#E75F24] not-italic">mamá.</em> Eres <span class="text-[#6A3A9F]">emprendedora.</span><br />Aquí no tienes que elegir.
     </h1>
 
-    <p class="text-gray-600 text-sm leading-relaxed mb-4 font-display">
+    <p class="text-gray-600 text-sm leading-relaxed mb-4 font-display lg:text-base lg:max-w-2xl lg:mx-auto">
       Únete a la comunidad de <span class="text-[#E75F24] font-semibold">mujeres</span> que están
       <span class="text-[#E75F24] font-semibold">construyendo negocios reales</span> con un hijo en
       la cadera, una junta en el celular y
       <span class="text-[#E75F24] font-semibold">cero culpa por intentarlo todo a la vez.</span>
     </p>
 
-    <p class="text-black text-sm font-bold leading-relaxed mb-6 font-sans">
-      Cada semana recibes una historia real. una herramienta práctica y un recordatorio de que no estás sola..
+    <p class="text-black text-sm font-bold leading-relaxed mb-6 font-sans lg:text-base">
+      Cada semana recibes una historia real. una herramienta práctica y un recordatorio de que no estás sola.
     </p>
 
-    <input
-      type="email"
-      placeholder="Tu correo electrónico"
-      class="w-full px-4 py-3 rounded-lg border border-gray-300 bg-white/60 text-sm font-display placeholder-gray-400 mb-3 focus:outline-none focus:ring-2 focus:ring-[#6A3A9F]"
-    />
-    <button class="w-full bg-gradient-to-r from-[#E75F24] to-[#6A3A9F] text-white font-bold py-3 rounded-lg text-sm tracking-widest font-sans">
-      Quiero suscribirme
-    </button>
+    <div class="lg:flex lg:flex-col lg:items-center lg:mx-auto">
+      <input
+        type="email"
+        placeholder="Tu correo electrónico"
+        class="w-full px-4 py-3 rounded-lg border border-gray-300 bg-white text-sm font-display placeholder-gray-400 mb-3 focus:outline-none focus:ring-2 focus:ring-[#6A3A9F] text-center lg:mb-4 lg:w-80"
+      />
+      <button class="w-full bg-gradient-to-r from-[#E75F24] to-[#6A3A9F] text-white font-bold py-3 rounded-lg text-sm tracking-widest font-sans lg:w-auto lg:px-10">
+        Quiero suscribirme
+      </button>
+    </div>
   </div>
 
-  <div class="relative flex justify-center items-end h-80 overflow-hidden">
-    <img
-      src="/nubeverde.png"
-      alt=""
-      aria-hidden="true"
-      class="absolute bottom-0 left-1/2 -translate-x-1/2 w-72 h-72 object-contain z-0"
-    />
+  <!-- Foto de Lizseth con flores decorativas -->
+  <div class="relative flex justify-center items-end h-80 overflow-hidden lg:h-[55vh]">
 
-    <img
-      src="/estrellamorada.png"
-      alt=""
-      aria-hidden="true"
-      class="absolute top-4 left-4 w-10 h-10 object-contain z-20"
-    />
+    <img src="/estrellamorada.png" alt="" aria-hidden="true"
+      class="absolute top-4 left-4 w-10 h-10 object-contain z-20 lg:w-60 lg:h-60 lg:top-6 lg:left-[33%]" />
 
-    <img
-      src="/estrellanaranja.png"
-      alt=""
-      aria-hidden="true"
-      class="absolute bottom-12 left-3 w-12 h-12 object-contain z-20"
-    />
+    <img src="/estrellanaranja.png" alt="" aria-hidden="true"
+      class="absolute bottom-12 left-3 w-12 h-12 object-contain z-20 lg:w-60 lg:h-60 lg:bottom-10 lg:left-[30%]" />
 
-    <img
-      src="/estrellablanca.png"
-      alt=""
-      aria-hidden="true"
-      class="absolute top-2 right-8 w-14 h-14 object-contain z-20"
-    />
+    <img src="/estrellablanca.png" alt="" aria-hidden="true"
+      class="absolute top-2 right-8 w-14 h-14 object-contain z-20 lg:w-72 lg:h-72 lg:top-2 lg:right-[20%]" />
+
+    <img src="/estrellanaranja.png" alt="" aria-hidden="true"
+      class="hidden lg:block absolute top-8 w-[10.5rem] h-[10.5rem] object-contain z-20 lg:top-6 lg:right-[35%]" />
+
+    <img src="/estrellaverde.png" alt="" aria-hidden="true"
+      class="hidden lg:block absolute bottom-10 w-[10.5rem] h-[10.5rem] object-contain z-20 lg:bottom-8 lg:right-[30%]" />
+
+    <img src="/nubeverde.png" alt="" aria-hidden="true"
+      class="absolute bottom-0 left-1/2 -translate-x-1/2 w-72 h-72 object-contain z-0 lg:w-[36rem] lg:h-[36rem] lg:-bottom-36" />
 
     <img
       src="/Lizseth_Henao%20.png"
       alt="Lizseth Henao, Host"
-      class="relative z-10 h-80 w-auto object-contain object-bottom"
+      class="relative z-10 h-80 w-auto object-contain object-bottom lg:h-full"
     />
 
-    <span class="absolute bottom-5 right-5 z-20 bg-[#D4187D] text-white text-[10px] font-bold px-3 py-1.5 rounded-full font-sans whitespace-nowrap">
+    <span class="absolute bottom-5 right-5 z-20 bg-[#D4187D] text-white text-[10px] font-bold px-3 py-1.5 rounded-full font-sans whitespace-nowrap lg:bottom-[62%] lg:right-[37%] lg:text-sm lg:px-5 lg:py-2.5">
       Con tu Host Lizseth Henao
     </span>
   </div>
+
 </section>

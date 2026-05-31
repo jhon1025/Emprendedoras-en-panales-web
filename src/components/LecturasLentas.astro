@@ -11,6 +11,7 @@ const articulos = [
     categoria: 'Productividad',
     categoriaColor: '#5BAD5E',
     titulo: '5 Hacks para organizar tu agenda entre tomas',
+    destacado: true,
   },
   {
     imagen: '/lecturalenta3.png',
@@ -20,10 +21,12 @@ const articulos = [
   },
 ];
 ---
-<section class="bg-white py-10 px-5">
-  <span class="text-xs text-[#EB6024] font-sans uppercase tracking-widest block text-center">Contenido Exclusivo</span>
+<section class="bg-white py-10 px-5 relative lg:px-16 lg:py-16">
 
-  <h2 class="font-bold text-4xl text-[#945DA7] mt-1 mb-3 font-sans leading-tight text-center">
+
+<span class="text-xs text-[#EB6024] font-sans uppercase tracking-widest block text-center lg:mt-8">Contenido Exclusivo</span>
+
+  <h2 class="font-bold text-4xl text-[#945DA7] mt-1 mb-3 font-sans leading-tight text-center lg:text-5xl">
     Lecturas
     <span class="relative inline-block">
       lentas
@@ -31,15 +34,16 @@ const articulos = [
     </span>
   </h2>
 
-  <p class="text-[#EB6024] text-sm font-display leading-relaxed mb-8 mt-4 text-center">
+  <p class="text-[#EB6024] text-sm font-display leading-relaxed mb-8 mt-4 text-center lg:text-base lg:max-w-xl lg:mx-auto">
     Artículos para <span class="text-black font-semibold">leer con calma</span> cuando el bebé
     por fin se durmió, el café sigue caliente y necesitas algo más que otro reel de 30 segundos.
   </p>
 
-  <div class="space-y-6">
+  <!-- Móvil: columna | Desktop: 3 en fila con card central destacada -->
+  <div class="space-y-6 lg:space-y-0 lg:grid lg:grid-cols-3 lg:gap-8 lg:items-start">
     {articulos.map((art) => (
-      <div class="rounded-2xl overflow-hidden shadow-md border border-gray-100">
-        <img src={art.imagen} alt={art.titulo} class="w-full h-48 object-cover" />
+      <div class={`rounded-2xl overflow-hidden shadow-md border border-gray-100 ${art.destacado ? 'lg:scale-105 lg:shadow-xl' : ''}`}>
+        <img src={art.imagen} alt={art.titulo} class="w-full object-cover aspect-[4/3]" />
         <div class="p-4 bg-[#945DA7]">
           <span
             class="inline-block text-white text-xs font-bold px-3 py-1 rounded-full mb-3 font-sans"
@@ -47,12 +51,19 @@ const articulos = [
           >
             {art.categoria}
           </span>
-          <h3 class="font-bold text-base text-white mb-3 font-display leading-snug">{art.titulo}</h3>
-          <a href="#" class="text-white text-sm font-display underline underline-offset-2">
+          <h3 class="font-bold text-base text-white mb-3 font-display leading-snug lg:text-lg">{art.titulo}</h3>
+          <a href="#" class="text-white text-sm font-display underline underline-offset-2 hover:text-white/80 transition-colors">
             Leer artículo
           </a>
         </div>
       </div>
     ))}
+  </div>
+
+  <!-- Borde ondulado inferior amarillo (desktop) -->
+  <div class="hidden lg:block absolute bottom-0 left-0 w-full overflow-hidden leading-none">
+    <svg viewBox="0 0 1440 60" preserveAspectRatio="none" class="w-full h-14" fill="#FAED37">
+      <path d="M0,60 L1440,60 L1440,45 C1410,0 1350,0 1320,45 C1290,0 1230,0 1200,45 C1170,0 1110,0 1080,45 C1050,0 990,0 960,45 C930,0 870,0 840,45 C810,0 750,0 720,45 C690,0 630,0 600,45 C570,0 510,0 480,45 C450,0 390,0 360,45 C330,0 270,0 240,45 C210,0 150,0 120,45 C90,0 30,0 0,45 Z"/>
+    </svg>
   </div>
 </section>

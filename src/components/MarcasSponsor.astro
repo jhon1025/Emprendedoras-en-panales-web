@@ -1,25 +1,49 @@
 ---
 ---
-<section class="bg-[#FAED37] py-12 px-5">
-  <div class="text-center">
-    <h2 class="font-bold text-4xl text-black mb-4 font-display leading-tight">
+<section class="bg-[#FAED37] py-12 px-5 relative lg:py-20 lg:px-24">
+
+  <!-- Elemento decorativo izquierda (desktop) -->
+  <img
+    src="/estrellanaranja.png"
+    alt=""
+    aria-hidden="true"
+    class="hidden lg:block absolute left-4 top-1/2 -translate-y-1/2 w-32 h-32 object-contain opacity-70"
+  />
+
+  <!-- Elemento decorativo derecha (desktop) -->
+  <img
+    src="/nubemorada.png"
+    alt=""
+    aria-hidden="true"
+    class="hidden lg:block absolute right-0 top-1/2 -translate-y-1/2 w-44 h-44 object-contain opacity-50"
+  />
+
+  <div class="text-center relative z-10">
+    <h2 class="font-bold text-4xl text-black mb-4 font-display leading-tight lg:text-5xl">
       Marcas que Creen en <span class="text-[#D4187D]">Nosotras</span>
     </h2>
 
-    <p class="text-gray-700 text-sm font-display leading-relaxed mb-3">
+    <p class="text-gray-700 text-sm font-display leading-relaxed mb-3 lg:text-base lg:max-w-xl lg:mx-auto">
       Estas marcas no nos patrocinan.
       <span class="font-semibold text-[#D4187D]">
         Igual que tú, creen que las mamás emprendedoras están construyendo algo que vale la pena apoyar.
       </span>
     </p>
 
-    <p class="font-bold text-base font-display mb-7 text-black">¿Tu marca habla con mamás?</p>
+    <p class="font-bold text-base font-display mb-7 text-black lg:text-lg">¿Tu marca habla con mamás?</p>
 
     <a
       href="mailto:emprendedorasenpanal@gmail.com"
-      class="inline-block bg-[#D4187D] text-white font-bold py-3 px-10 rounded-full font-display tracking-wide text-sm"
+      class="inline-block bg-[#D4187D] text-white font-bold py-3 px-10 rounded-full font-display tracking-wide text-sm hover:bg-[#b5126a] transition-colors lg:py-4 lg:px-14 lg:text-base"
     >
       Hablemos
     </a>
+  </div>
+
+  <!-- Scallops amarillos hacia abajo (fuera de la sección) -->
+  <div class="hidden lg:block absolute bottom-0 left-0 w-full translate-y-full">
+    <svg viewBox="0 0 1440 60" preserveAspectRatio="none" class="w-full h-14" fill="#FAED37">
+      <path d="M0,0 L1440,0 A60,60 0 0,1 1320,0 A60,60 0 0,1 1200,0 A60,60 0 0,1 1080,0 A60,60 0 0,1 960,0 A60,60 0 0,1 840,0 A60,60 0 0,1 720,0 A60,60 0 0,1 600,0 A60,60 0 0,1 480,0 A60,60 0 0,1 360,0 A60,60 0 0,1 240,0 A60,60 0 0,1 120,0 A60,60 0 0,1 0,0 Z"/>
+    </svg>
   </div>
 </section>
