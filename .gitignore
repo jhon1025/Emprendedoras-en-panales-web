@@ -22,3 +22,10 @@ pnpm-debug.log*
 
 # jetbrains setting folder
 .idea/
+
+# design references (PDFs Figma) — no van al repo ni al deploy
+docs/
+
+# kits completos de fuentes (sin usar; solo se referencian pesos puntuales en public/fonts/)
+public/fonts/Bevellier_Complete/
+public/fonts/ClashDisplay_Complete/

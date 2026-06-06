@@ -1,0 +1,50 @@
+---
+// Componente: HeroHeader.astro
+// Estrategia en capas (z-index), de atrás hacia adelante:
+//   1. Gotita (z-0)  → DETRÁS del header. El naranja opaco la tapa por arriba;
+//      solo asoma la parte de abajo. Sin costuras (naranja sobre naranja).
+//   2. Header (z-10) → barra naranja con esquinas redondeadas (deja ver el morado).
+//   3. Logo (z-20)   → centrado con flexbox, sube con margin negativo para
+//      straddlear el borde.
+// El logo usa la versión RECORTADA del SVG (logo_positivo_crop.svg): sin el
+// padding transparente del original, así no reserva aire de más (no genera el
+// espacio morado bajo el header) y queda centrado sin correcciones. Mobile first.
+---
+
+<!-- El morado de fondo lo da <main> (las esquinas redondeadas lo dejan ver) -->
+
+<!-- Capa header + gotita -->
+<div class="relative">
+  <!-- Gotita / barriguita DETRÁS del header. translate-y = cuánto asoma. -->
+  <svg
+    viewBox="0 0 144 18"
+    preserveAspectRatio="none"
+    aria-hidden="true"
+    class="absolute bottom-0 left-1/2 z-0 h-7 w-[150px] -translate-x-1/2 translate-y-[70%] sm:h-8 sm:w-[175px] md:h-9 md:w-[200px]"
+  >
+    <path
+      d="M71.8905 17.5C41 17.6028 25.6156 13.9937 1.8905 0.5H141.391C117.382 14.3363 101.476 16.4758 71.8905 17.5Z"
+      fill="#EB6024"
+    />
+  </svg>
+
+  <!-- Header naranja, ENCIMA de la gotita -->
+  <header class="relative z-10 h-16 rounded-b-[1.5rem] bg-[#EB6024] sm:h-[4.5rem] md:h-20"></header>
+</div>
+
+<!-- Logo: centrado con flex; el margin negativo lo sube para straddlear el borde -->
+<div class="relative z-20 -mt-11 flex justify-center sm:-mt-[3.25rem] md:-mt-[3.75rem]">
+  <a
+    href="/"
+    aria-label="Ir al inicio — Emprendedoras en Pañales"
+    class="block rounded-full transition-transform duration-300 hover:scale-105 focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-white/50"
+  >
+    <img
+      src="/masterclass/logo_positivo_crop.svg"
+      alt="Emprendedoras en Pañales"
+      width="160"
+      height="117"
+      class="w-20 drop-shadow-[0_8px_12px_rgba(0,0,0,0.18)] sm:w-24 md:w-28"
+    />
+  </a>
+</div>

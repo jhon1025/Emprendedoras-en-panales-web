@@ -1,17 +1,68 @@
 ---
-// Archivo: src/layouts/Layout.astro
-import '../styles/fonts.css'; // <-- AÑADE ESTA LÍNEA
+import '../styles/fonts.css';
 
+interface Props {
+  title?: string;
+  description?: string;
+  ogImage?: string;
+  ogType?: string;
+  canonicalURL?: string;
+  noindex?: boolean;
+  jsonLd?: object | object[];
+}
+
+const {
+  title = 'Emprendedoras en Pañales',
+  description = 'El podcast para mamás emprendedoras de Latinoamérica.',
+  ogImage,
+  ogType = 'website',
+  canonicalURL,
+  noindex = false,
+  jsonLd,
+} = Astro.props;
+
+const siteUrl = Astro.url.origin;
+const pageUrl = canonicalURL || Astro.url.href;
+const ogImageUrl = ogImage ? new URL(ogImage, siteUrl).href : undefined;
 ---
+
 <!doctype html>
 <html lang="es">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width" />
-    <title>Emprendedoras en pañales</title>
-     
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="canonical" href={pageUrl} />
+    {noindex && <meta name="robots" content="noindex, nofollow" />}
+    <meta name="theme-color" content="#E75F24" />
+
+    <!-- Open Graph -->
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={pageUrl} />
+    <meta property="og:type" content={ogType} />
+    <meta property="og:locale" content="es_LA" />
+    <meta property="og:site_name" content="Emprendedoras en Pañales" />
+    {ogImageUrl && <meta property="og:image" content={ogImageUrl} />}
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content={ogImageUrl ? 'summary_large_image' : 'summary'} />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    {ogImageUrl && <meta name="twitter:image" content={ogImageUrl} />}
+
+    <!-- JSON-LD Structured Data -->
+    {jsonLd && (
+      Array.isArray(jsonLd)
+        ? jsonLd.map((data) => (
+            <script type="application/ld+json" set:html={JSON.stringify(data)} />
+          ))
+        : <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
+    )}
   </head>
-  <body >
+  <body class="overflow-x-hidden">
     <slot />
   </body>
 </html>

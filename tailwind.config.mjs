@@ -7,11 +7,17 @@ export default {
   theme: {
   extend: {
     fontFamily: {
-      // Usaremos 'sans' para la fuente del cuerpo (Bevellier)
       sans: ['Bevellier', 'sans-serif'],
-      // Y 'display' para los títulos grandes (Clash Display)
       display: ['Clash Display', 'sans-serif'],
-    }
+    },
+    colors: {
+      brand: {
+        orange: '#E75F24',
+        purple: '#6A3A9F',
+        yellow: '#FAED37',
+        green: '#22C55E',
+      },
+    },
   },
 },
   plugins: [],

@@ -1,0 +1,38 @@
+---
+import Layout from '../layouts/Layout.astro';
+import MCHero from '../components/masterclass/MCHero.astro';
+import MCReservaModal from '../components/masterclass/MCReservaModal.astro';
+
+const title = 'Masterclass: Contenido que Vende para Mamás Emprendedoras | Emprendedoras en Pañales';
+const description = 'Aprende a crear contenido viral para tu negocio en redes sociales. Masterclass en vivo por solo $20 USD. Para mamás emprendedoras que quieren crecer en YouTube e Instagram.';
+
+const jsonLd = [
+  {
+    '@context': 'https://schema.org',
+    '@type': 'Course',
+    name: 'Masterclass: Contenido que Vende',
+    description: description,
+    provider: {
+      '@type': 'Organization',
+      name: 'Emprendedoras en Pañales',
+      url: 'https://www.emprendedorasenpañales.com',
+    },
+    offers: {
+      '@type': 'Offer',
+      price: '20',
+      priceCurrency: 'USD',
+      availability: 'https://schema.org/InStock',
+    },
+  },
+];
+---
+
+<Layout title={title} description={description} jsonLd={jsonLd}>
+  <main class="bg-[#945DA7]">
+    <MCHero />
+    <!-- Siguientes componentes se agregan aquí -->
+
+    <!-- Modal de reserva (se abre desde cualquier CTA [data-open-reserva]) -->
+    <MCReservaModal />
+  </main>
+</Layout>
