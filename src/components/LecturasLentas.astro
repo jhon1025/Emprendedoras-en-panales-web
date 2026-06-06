@@ -21,7 +21,7 @@ const articulos = [
   },
 ];
 ---
-<section class="bg-white py-10 px-5 relative lg:px-16 lg:py-16">
+<section class="bg-white pt-10 px-5 relative lg:px-16 lg:pt-16">
 
 
 <span class="text-xs text-[#EB6024] font-sans uppercase tracking-widest block text-center lg:mt-8">Contenido Exclusivo</span>
@@ -60,9 +60,14 @@ const articulos = [
     ))}
   </div>
 
-  <!-- Borde ondulado inferior amarillo (desktop) -->
-  <div class="hidden lg:block absolute bottom-0 left-0 w-full overflow-hidden leading-none">
-    <svg viewBox="0 0 1440 60" preserveAspectRatio="none" class="w-full h-14" fill="#FAED37">
+  <!-- Colinas amarillas inferiores -->
+  <div class="mt-8 -mx-5 lg:-mx-16 leading-none">
+    <!-- Móvil: 5 colinas -->
+    <svg viewBox="0 0 600 60" preserveAspectRatio="none" class="w-full h-8 lg:hidden" fill="#F8EF36">
+      <path d="M0,60 L600,60 L600,45 C570,0 510,0 480,45 C450,0 390,0 360,45 C330,0 270,0 240,45 C210,0 150,0 120,45 C90,0 30,0 0,45 Z"/>
+    </svg>
+    <!-- Desktop: 12 colinas -->
+    <svg viewBox="0 0 1440 60" preserveAspectRatio="none" class="w-full h-8 hidden lg:block" fill="#F8EF36">
       <path d="M0,60 L1440,60 L1440,45 C1410,0 1350,0 1320,45 C1290,0 1230,0 1200,45 C1170,0 1110,0 1080,45 C1050,0 990,0 960,45 C930,0 870,0 840,45 C810,0 750,0 720,45 C690,0 630,0 600,45 C570,0 510,0 480,45 C450,0 390,0 360,45 C330,0 270,0 240,45 C210,0 150,0 120,45 C90,0 30,0 0,45 Z"/>
     </svg>
   </div>
