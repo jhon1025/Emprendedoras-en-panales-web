@@ -8,9 +8,9 @@ export default {
   extend: {
     fontFamily: {
       // Usaremos 'sans' para la fuente del cuerpo (Bevellier)
-      sans: ['Bevellier', 'sans-serif'],
-      // Y 'display' para los títulos grandes (Clash Display)
-      display: ['Clash Display', 'sans-serif'],
+      sans: ['Clash Display', 'sans-serif'],
+      // Y 'display' para los títulos grandes (Bevellier)
+      display: ['Bevellier', 'sans-serif'],
     }
   },
 },
