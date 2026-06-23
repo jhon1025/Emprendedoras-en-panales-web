@@ -5,51 +5,53 @@
   <div class="flex flex-col lg:flex-row items-center gap-10 lg:gap-16 max-w-5xl mx-auto">
 
     <!-- LEFT: Foto + decorativos -->
-    <div class="relative shrink-0" style="width: 280px; height: 320px;">
+    <div class="relative shrink-0 w-[300px] h-[340px] lg:h-[460px]">
 
-      <!-- Blob verde — arriba derecha -->
-      <img src="/blob_verde.png" alt="" aria-hidden="true"
-           class="absolute -top-8 -right-10 w-[90px] z-10" />
+      <!-- Starburst verde — abajo izquierda -->
+      <img src="/estrellaverde.png" alt="" aria-hidden="true"
+           class="absolute bottom-[20px] left-[-24px] w-[70px] z-[1]" />
 
-      <!-- Flor blanca — arriba izquierda sobre la foto -->
-      <img src="/flor_pink_s2.png" alt="" aria-hidden="true"
-           class="absolute top-6 left-6 w-[38px] z-20 brightness-0 invert" />
+      <!-- Foto Diana con nube morada -->
+      <img src="/diana_blob.png" alt="Diana Cárdenas"
+           class="absolute bottom-[88px] lg:bottom-[-32px] left-1/2 -translate-x-1/2 w-[386px] lg:w-[384px] max-w-none object-contain object-bottom z-10" />
 
-      <!-- Círculo rosado de fondo -->
-      <div class="absolute bottom-0 left-1/2 -translate-x-1/2 w-[260px] h-[260px] rounded-full bg-[#EC4699] overflow-hidden z-0">
-        <img src="/diana_cardenas.png" alt="Diana Cárdenas"
-             class="absolute bottom-0 left-1/2 -translate-x-1/2 w-full object-contain object-bottom" />
-      </div>
-
-      <!-- Badge amarillo con micrófono — arriba izquierda -->
-      <div class="absolute top-2 left-[-10px] z-20 w-[80px] h-[72px]">
+      <!-- Badge amarillo con micrófono — arriba izquierda, sobre el blob -->
+      <div class="absolute top-[28px] left-[-12px] z-20 w-[80px] h-[72px]">
         <img src="/badge_amarillo.png" alt="" aria-hidden="true" class="w-full h-full object-contain" />
         <img src="/microfono_naranja.png" alt="" aria-hidden="true"
-             class="absolute inset-0 w-[44px] h-[44px] m-auto object-contain" />
+             class="absolute inset-0 w-[44px] h-[44px] m-auto object-contain -translate-y-1" />
       </div>
 
+      <!-- Flor blanca — sobre el blob, a la derecha del badge -->
+      <img src="/flor_pink_s2.png" alt="" aria-hidden="true"
+           class="absolute top-[72px] left-[140px] w-[30px] z-20 brightness-0 invert" />
+
       <!-- Etiqueta "Madre y empresaria" -->
-      <div class="absolute bottom-6 left-1/2 -translate-x-1/2 bg-[#EC4699] rounded-full px-4 py-[5px] z-20 text-center">
-        <p class="font-sans text-white text-[11px] leading-tight whitespace-nowrap">Madre y<br/>empresaria</p>
+      <div class="absolute bottom-[10px] right-[-24px] z-20 w-[130px] h-[130px]">
+        <img src="/nuberosada.png" alt="" aria-hidden="true" class="absolute inset-0 w-full h-full object-contain" />
+        <p class="absolute inset-0 flex items-center justify-center text-center font-sans font-semibold text-white text-[11px] leading-tight px-2">Madre y<br/>empresaria</p>
       </div>
 
     </div>
 
     <!-- RIGHT: Cita + nombre -->
-    <div class="flex-1">
+    <div class="flex-1 relative">
 
-      <!-- Burbuja de diálogo morada -->
-      <div class="relative bg-[#945DA7] rounded-[24px] px-7 py-6 lg:px-8 lg:py-7">
-        <!-- Cola izquierda -->
-        <div class="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-[14px] w-0 h-0"
-             style="border-top: 14px solid transparent; border-bottom: 14px solid transparent; border-right: 16px solid #945DA7;"></div>
+      <!-- Círculos decorativos -->
+      <div class="absolute -top-7 right-8 w-[70px] h-[70px] rounded-full bg-[#A9CF38] z-0"></div>
+      <div class="absolute top-[28px] right-0 w-[26px] h-[26px] rounded-full bg-[#945DA7] z-0"></div>
+      <div class="absolute -bottom-6 right-[58px] w-[38px] h-[38px] rounded-full bg-[#945DA7] z-0"></div>
+      <div class="absolute -bottom-9 right-[14px] w-[20px] h-[20px] rounded-full bg-[#945DA7] z-0"></div>
+
+      <!-- Burbuja de cita rosa -->
+      <div class="relative bg-[#EC4699] rounded-[24px] px-7 py-6 lg:px-8 lg:py-7 z-10">
         <p class="font-sans text-white text-[15px] lg:text-[17px] leading-relaxed">
           "El episodio quedó espectacular y la edición es muy linda. Todo se ve tan profesional que la gente ha llegado a mi tienda a comprar más, felicitándome por lo bien que se veía todo. Incluso quedé con ganas de patrocinar otros episodios."
         </p>
       </div>
 
       <!-- Nombre y cargo -->
-      <div class="mt-5 lg:mt-6 pl-2">
+      <div class="mt-5 lg:mt-6 pl-2 relative z-10">
         <p class="font-sans font-bold text-gray-800 text-[18px] lg:text-[22px] leading-tight">Diana Cárdenas</p>
         <p class="font-sans text-gray-500 text-[14px] lg:text-[16px] mt-1">Dueña de Diana Nice</p>
       </div>

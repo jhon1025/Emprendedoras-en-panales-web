@@ -1,0 +1,71 @@
+---
+export interface Props {
+  categoria?: string;
+  titulo?: string;
+  autorNombre?: string;
+  autorCargo?: string;
+}
+const {
+  categoria = 'Productividad',
+  titulo = '5 Hacks para organizar tu agenda entre tomas',
+  autorNombre = 'Lizeth Henao',
+  autorCargo = 'Fundadora y Podcaster',
+} = Astro.props;
+---
+<section class="relative bg-white overflow-x-hidden px-6 pt-10 pb-20 lg:px-24 lg:pt-16 lg:pb-28">
+
+  <div class="lg:flex lg:items-start lg:justify-between lg:gap-10">
+
+    <!-- Contenido -->
+    <div class="relative z-10 lg:max-w-4xl">
+
+      <!-- Badge categoría -->
+      <span class="inline-block bg-[#E75F24] text-white font-sans text-[13px] lg:text-[14px] px-5 py-1.5 rounded-full mb-5">
+        {categoria}
+      </span>
+
+      <!-- Título + estrella verde -->
+      <h1 class="relative font-display font-bold text-[#945DA7] text-[32px] leading-[1.15] lg:text-[90px] mb-6">
+        {titulo}
+        <img
+          src="/estrellaverde_pequena.png"
+          alt=""
+          aria-hidden="true"
+          class="inline-block w-[18px] lg:w-[22px] -translate-y-3 ml-1 pointer-events-none"
+        />
+      </h1>
+
+      <!-- Chip autor -->
+      <div class="inline-flex items-center gap-3 bg-[#D9E8A8] rounded-full pl-2 pr-6 py-2">
+        <img
+          src="/avatar_lizeth_blogind.png"
+          alt={autorNombre}
+          class="w-11 h-11 lg:w-12 lg:h-12 rounded-full object-cover"
+        />
+        <div class="leading-tight">
+          <p class="font-sans font-bold text-black text-[14px] lg:text-[15px]">{autorNombre}</p>
+          <p class="font-sans text-gray-600 text-[12px] lg:text-[13px]">{autorCargo}</p>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Cluster decorativo -->
+    <div class="relative z-10 hidden lg:block w-[364px] h-[364px] flex-shrink-0">
+      <img src="/flor_naranja.png" alt="" aria-hidden="true" class="absolute top-0 right-[106px] w-[140px] pointer-events-none" />
+      <img src="/estrella_morada_blogind.png" alt="" aria-hidden="true" class="absolute top-[56px] right-[-20px] w-[200px] pointer-events-none" />
+      <img src="/flor_rosa_blogind.png" alt="" aria-hidden="true" class="absolute top-[148px] left-[110px] w-[140px] pointer-events-none" />
+      <img src="/estrella_amarilla_blogind.png" alt="" aria-hidden="true" class="absolute bottom-0 right-[42px] w-[140px] pointer-events-none" />
+    </div>
+
+  </div>
+
+  <!-- Cluster decorativo móvil -->
+  <div class="absolute z-10 bottom-[20px] right-0 w-[180px] h-[150px] lg:hidden">
+    <img src="/flor_naranja.png" alt="" aria-hidden="true" class="absolute top-0 right-[20px] w-[70px] pointer-events-none" />
+    <img src="/estrella_morada_blogind.png" alt="" aria-hidden="true" class="absolute top-[35px] right-[-20px] w-[95px] pointer-events-none" />
+    <img src="/flor_rosa_blogind.png" alt="" aria-hidden="true" class="absolute top-[45px] left-[70px] w-[65px] pointer-events-none" />
+    <img src="/estrella_amarilla_blogind.png" alt="" aria-hidden="true" class="absolute bottom-0 left-[95px] w-[55px] pointer-events-none" />
+  </div>
+
+</section>
