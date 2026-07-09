@@ -10,49 +10,78 @@ const marcas = [
   { src: '/cadu.png', alt: 'Cadu' },
   { src: '/casaraiz.png', alt: 'Casa Raiz' },
 ];
+
+// Carrusel desktop: dos filas, cada una en dirección contraria
+const filaUno = marcas.slice(0, 5);
+const filaDos = marcas.slice(5);
 ---
 <footer>
 
   <!-- Logos de marcas -->
-  <div class="bg-white pt-16 pb-8 px-5 lg:pt-20 lg:pb-12 lg:px-32">
+  <div class="reveal-target bg-white pt-28 pb-8 px-5 lg:pt-36 lg:pb-12 lg:px-32">
     <!-- Móvil: grid 3 columnas | Desktop: grid 2 filas centrado -->
-    <div class="grid grid-cols-3 gap-6 items-center justify-items-center lg:hidden">
+    <div class="grid grid-cols-3 gap-6 lg:gap-6 items-center justify-items-center lg:hidden">
       {marcas.map((m) => (
-        <img src={m.src} alt={m.alt} class="h-10 w-auto object-contain" />
+        <img src={m.src} alt={m.alt} class="h-10 lg:h-10 w-auto lg:w-auto object-contain" />
       ))}
     </div>
-    <div class="hidden lg:grid lg:grid-cols-5 lg:gap-x-16 lg:gap-y-8 lg:items-center lg:justify-items-center">
-      {marcas.map((m) => (
-        <img src={m.src} alt={m.alt} class="h-10 w-auto object-contain" />
-      ))}
+    <div class="hidden lg:flex lg:flex-col lg:gap-y-8">
+      <div class="marquee-row">
+        <div class="marquee-track">
+          <div class="marquee-content">
+            {filaUno.map((m) => (
+              <img src={m.src} alt={m.alt} class="h-[52px] w-auto object-contain mx-10" />
+            ))}
+          </div>
+          <div class="marquee-content" aria-hidden="true">
+            {filaUno.map((m) => (
+              <img src={m.src} alt={m.alt} class="h-[52px] w-auto object-contain mx-10" />
+            ))}
+          </div>
+        </div>
+      </div>
+      <div class="marquee-row">
+        <div class="marquee-track marquee-track-reverse">
+          <div class="marquee-content">
+            {filaDos.map((m) => (
+              <img src={m.src} alt={m.alt} class="h-[52px] w-auto object-contain mx-10" />
+            ))}
+          </div>
+          <div class="marquee-content" aria-hidden="true">
+            {filaDos.map((m) => (
+              <img src={m.src} alt={m.alt} class="h-[52px] w-auto object-contain mx-10" />
+            ))}
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 
   <!-- Newsletter blob -->
-  <div class="bg-white px-5 pt-2 pb-10 lg:pb-20 lg:px-16">
+  <div class="reveal-target bg-white px-5 pt-2 lg:pt-2 pb-10 lg:pb-20 lg:px-16">
     <div class="relative text-white text-center lg:max-w-lg lg:mx-auto">
       <img
         src="/nuberosada.png"
         alt=""
         aria-hidden="true"
-        class="absolute inset-0 w-full h-full object-fill pointer-events-none z-0"
+        class="absolute top-0 right-0 bottom-0 left-0 lg:right-auto lg:bottom-auto lg:top-[-20px] lg:left-1/2 lg:-translate-x-1/2 w-full lg:w-[1037px] h-full lg:h-[702px] max-w-none object-fill pointer-events-none"
       />
       <div class="relative z-10 p-7 lg:p-10">
-        <h3 class="font-bold text-2xl mb-3 font-sans leading-tight lg:text-3xl">
+        <h3 class="font-bold text-2xl mb-3 lg:mb-3 font-sans leading-tight lg:text-3xl">
           Lo que te llega cada lunes
         </h3>
-        <p class="text-sm font-display leading-relaxed mb-2 text-white/90 lg:text-base">
+        <p class="text-sm font-display leading-relaxed mb-2 lg:mb-2 text-white/90 lg:text-base">
           Una historia, una herramienta y una idea para empezar la semana sin sentirte tan perdida.
         </p>
-        <p class="text-sm font-display mb-6 text-white/90 lg:text-base">
+        <p class="text-sm font-display mb-6 lg:mb-6 text-white/90 lg:text-base">
           Con tu <span class="font-bold underline">descuento</span> por una mama, para mamas.
         </p>
         <input
           type="email"
           placeholder="Tu correo electrónico"
-          class="w-full px-4 py-3 rounded-lg text-gray-800 text-sm font-display mb-3 focus:outline-none bg-white"
+          class="w-full lg:w-full px-4 lg:px-4 py-3 lg:py-3 rounded-lg text-gray-800 text-sm lg:text-sm font-display mb-3 lg:mb-3 focus:outline-none bg-white"
         />
-        <button class="w-full bg-[#FAED37] text-black font-bold py-3 rounded-lg font-sans tracking-widest text-sm hover:bg-yellow-300 transition-colors">
+        <button class="w-full lg:w-full bg-[#FAED37] text-black font-bold py-3 lg:py-3 rounded-lg font-sans tracking-widest lg:tracking-widest text-sm lg:text-sm hover:bg-yellow-300 transition-colors">
           Quiero recibirlo
         </button>
       </div>
@@ -60,3 +89,33 @@ const marcas = [
   </div>
 
 </footer>
+
+<style>
+  .marquee-row {
+    overflow: hidden;
+    line-height: 0;
+  }
+  .marquee-track {
+    display: flex;
+    width: max-content;
+    animation: marquee-scroll 26s linear infinite;
+  }
+  .marquee-track-reverse {
+    animation-direction: reverse;
+    animation-duration: 30s;
+  }
+  .marquee-content {
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;
+  }
+  @keyframes marquee-scroll {
+    from { transform: translateX(0); }
+    to { transform: translateX(-50%); }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .marquee-track {
+      animation: none;
+    }
+  }
+</style>

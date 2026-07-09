@@ -1,13 +1,21 @@
 ---
 ---
-<section class="bg-[#F8EF36] py-12 px-5 relative z-10 lg:py-20 lg:px-24">
+<section class="bg-[#F8EF36] py-20 px-5 relative z-10 lg:py-32 lg:px-24">
 
   <!-- Elemento decorativo izquierda (desktop) -->
   <img
     src="/estrellanaranja.png"
     alt=""
     aria-hidden="true"
-    class="hidden lg:block absolute left-4 top-1/2 -translate-y-1/2 w-32 h-32 object-contain opacity-70"
+    class="float-decor hidden lg:block absolute left-4 lg:left-4 top-1/2 lg:top-1/2 -translate-y-1/2 lg:-translate-y-1/2 w-32 lg:w-32 h-32 lg:h-32 object-contain opacity-70"
+  />
+
+  <!-- Gimmick decorativo, pegado al borde izquierdo de la pantalla (desktop) -->
+  <img
+    src="/gimmick_blanco.png"
+    alt=""
+    aria-hidden="true"
+    class="hidden lg:block absolute left-0 top-1/2 -translate-y-1/2 w-[220px] h-auto max-w-none object-contain"
   />
 
   <!-- Elemento decorativo derecha (desktop) -->
@@ -15,52 +23,71 @@
     src="/nubemorada.png"
     alt=""
     aria-hidden="true"
-    class="hidden lg:block absolute right-0 top-1/2 -translate-y-1/2 w-44 h-44 object-contain opacity-50"
+    class="float-decor float-decor-delayed hidden lg:block absolute right-0 lg:right-0 top-1/2 lg:top-1/2 -translate-y-1/2 lg:-translate-y-1/2 w-44 lg:w-[352px] h-44 lg:h-[352px] object-contain opacity-50"
   />
 
   <div class="text-center relative z-10">
-    <h2 class="font-bold text-4xl text-black mb-4 font-display leading-tight lg:text-5xl">
+    <h2 class="reveal-target font-bold text-4xl text-black mb-4 lg:mb-4 font-display leading-tight lg:text-5xl">
       Marcas que Creen en <span class="text-[#D4187D]">Nosotras</span>
     </h2>
 
-    <p class="text-gray-700 text-sm font-display leading-relaxed mb-3 lg:text-base lg:max-w-xl lg:mx-auto">
+    <p class="reveal-target text-gray-700 text-sm font-display leading-relaxed mb-3 lg:mb-3 lg:text-base lg:max-w-xl lg:mx-auto" style="transition-delay: 100ms">
       Estas marcas no nos patrocinan.
       <span class="font-semibold text-[#D4187D]">
         Igual que tú, creen que las mamás emprendedoras están construyendo algo que vale la pena apoyar.
       </span>
     </p>
 
-    <p class="font-bold text-base font-display mb-7 text-black lg:text-lg">¿Tu marca habla con mamás?</p>
+    <p class="reveal-target font-bold text-base font-display mb-7 lg:mb-7 text-black lg:text-lg" style="transition-delay: 200ms">¿Tu marca habla con mamás?</p>
 
     <a
       href="mailto:emprendedorasenpanal@gmail.com"
-      class="inline-block bg-[#D4187D] text-white font-bold py-3 px-10 rounded-full font-display tracking-wide text-sm hover:bg-[#b5126a] transition-colors lg:py-4 lg:px-14 lg:text-base"
+      class="reveal-target inline-block bg-[#D4187D] text-white font-bold py-3 px-10 rounded-full font-display tracking-wide lg:tracking-wide text-sm hover:bg-[#b5126a] hover:-translate-y-0.5 transition-all lg:py-4 lg:px-14 lg:text-base"
+      style="transition-delay: 300ms"
     >
       Hablemos
     </a>
   </div>
 
   <!-- Scallops amarillos subiendo hacia arriba, fuera de la sección sobre el fondo blanco -->
-  <div class="absolute top-0 left-0 w-full -translate-y-full z-10" style="line-height: 0;">
-    <!-- Móvil: 6 scallops -->
-    <svg viewBox="0 0 720 60" preserveAspectRatio="none" class="w-full block lg:hidden" style="height: 60px;">
-      <path d="M0,60 A60,60 0 0,1 120,60 A60,60 0 0,1 240,60 A60,60 0 0,1 360,60 A60,60 0 0,1 480,60 A60,60 0 0,1 600,60 A60,60 0 0,1 720,60 Z" fill="#F8EF36"/>
+  <div class="absolute top-0 lg:top-0 left-0 lg:left-0 w-full lg:w-full -translate-y-full lg:-translate-y-full -mt-2 lg:mt-0 z-10" style="line-height: 0;">
+    <!-- Móvil: 5 scallops, los de las esquinas cortados por el borde de pantalla -->
+    <svg viewBox="60 0 480 60" preserveAspectRatio="none" class="w-full lg:w-full block lg:hidden" style="height: 60px;">
+      <path d="M0,60 A60,60 0 0,1 120,60 A60,60 0 0,1 240,60 A60,60 0 0,1 360,60 A60,60 0 0,1 480,60 A60,60 0 0,1 600,60 Z" fill="#F8EF36"/>
     </svg>
     <!-- Desktop: 12 scallops -->
-    <svg viewBox="0 0 1440 60" preserveAspectRatio="none" class="w-full hidden lg:block" style="height: 60px;">
+    <svg viewBox="0 0 1440 60" preserveAspectRatio="none" class="w-full lg:w-full hidden lg:block" style="height: 60px;">
       <path d="M0,60 A60,60 0 0,1 120,60 A60,60 0 0,1 240,60 A60,60 0 0,1 360,60 A60,60 0 0,1 480,60 A60,60 0 0,1 600,60 A60,60 0 0,1 720,60 A60,60 0 0,1 840,60 A60,60 0 0,1 960,60 A60,60 0 0,1 1080,60 A60,60 0 0,1 1200,60 A60,60 0 0,1 1320,60 A60,60 0 0,1 1440,60 Z" fill="#F8EF36"/>
     </svg>
   </div>
 
   <!-- Scallops amarillos colgando hacia abajo, fuera de la sección sobre el fondo blanco -->
-  <div class="absolute bottom-0 left-0 w-full translate-y-full z-10" style="line-height: 0;">
-    <!-- Móvil: 6 scallops -->
-    <svg viewBox="0 0 720 60" preserveAspectRatio="none" class="w-full block lg:hidden" style="height: 60px;">
-      <path d="M0,0 A60,60 0 0,0 120,0 A60,60 0 0,0 240,0 A60,60 0 0,0 360,0 A60,60 0 0,0 480,0 A60,60 0 0,0 600,0 A60,60 0 0,0 720,0 Z" fill="#F8EF36"/>
+  <div class="absolute bottom-0 lg:bottom-0 left-0 lg:left-0 w-full lg:w-full translate-y-full lg:translate-y-full z-10" style="line-height: 0;">
+    <!-- Móvil: 5 scallops, los de las esquinas cortados por el borde de pantalla -->
+    <svg viewBox="60 0 480 60" preserveAspectRatio="none" class="w-full lg:w-full block lg:hidden" style="height: 60px;">
+      <path d="M0,0 A60,60 0 0,0 120,0 A60,60 0 0,0 240,0 A60,60 0 0,0 360,0 A60,60 0 0,0 480,0 A60,60 0 0,0 600,0 Z" fill="#F8EF36"/>
     </svg>
     <!-- Desktop: 12 scallops -->
-    <svg viewBox="0 0 1440 60" preserveAspectRatio="none" class="w-full hidden lg:block" style="height: 60px;">
+    <svg viewBox="0 0 1440 60" preserveAspectRatio="none" class="w-full lg:w-full hidden lg:block" style="height: 60px;">
       <path d="M0,0 A60,60 0 0,0 120,0 A60,60 0 0,0 240,0 A60,60 0 0,0 360,0 A60,60 0 0,0 480,0 A60,60 0 0,0 600,0 A60,60 0 0,0 720,0 A60,60 0 0,0 840,0 A60,60 0 0,0 960,0 A60,60 0 0,0 1080,0 A60,60 0 0,0 1200,0 A60,60 0 0,0 1320,0 A60,60 0 0,0 1440,0 Z" fill="#F8EF36"/>
     </svg>
   </div>
 </section>
+
+<style>
+  @keyframes float-decor {
+    0%, 100% { transform: translateY(-50%) translateX(0); }
+    50% { transform: translateY(-50%) translateY(-14px); }
+  }
+  .float-decor {
+    animation: float-decor 6s ease-in-out infinite;
+  }
+  .float-decor-delayed {
+    animation-delay: 1.2s;
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .float-decor {
+      animation: none;
+    }
+  }
+</style>

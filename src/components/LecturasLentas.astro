@@ -24,35 +24,40 @@ const articulos = [
 <section class="bg-white pt-10 px-5 relative lg:px-16 lg:pt-16">
 
 
-<span class="text-xs text-[#EB6024] font-sans uppercase tracking-widest block text-center lg:mt-8">Contenido Exclusivo</span>
+<div class="reveal-target">
+<span class="text-xs lg:text-xs text-[#EB6024] font-sans uppercase tracking-widest lg:tracking-widest block text-center lg:mt-8">Contenido Exclusivo</span>
 
-  <h2 class="font-bold text-4xl text-[#945DA7] mt-1 mb-3 font-sans leading-tight text-center lg:text-5xl">
+  <h2 class="font-bold text-4xl text-[#945DA7] mt-1 lg:mt-1 mb-3 lg:mb-3 font-sans leading-tight text-center lg:text-5xl">
     Lecturas
     <span class="relative inline-block">
       lentas
-      <span class="absolute left-0 -bottom-1 w-full h-[3px] bg-[#E75F24] rounded-full"></span>
+      <span class="absolute left-0 lg:left-0 -bottom-1 lg:-bottom-1 w-full lg:w-full h-[3px] lg:h-[3px] bg-[#E75F24] rounded-full"></span>
     </span>
   </h2>
 
-  <p class="text-[#EB6024] text-sm font-display leading-relaxed mb-8 mt-4 text-center lg:text-base lg:max-w-xl lg:mx-auto">
+  <p class="text-[#EB6024] text-sm font-display leading-relaxed mb-8 lg:mb-8 mt-4 lg:mt-4 text-center lg:text-base lg:max-w-xl lg:mx-auto">
     Artículos para <span class="text-black font-semibold">leer con calma</span> cuando el bebé
     por fin se durmió, el café sigue caliente y necesitas algo más que otro reel de 30 segundos.
   </p>
+</div>
 
   <!-- Móvil: columna | Desktop: 3 en fila con card central destacada -->
   <div class="space-y-6 lg:space-y-0 lg:grid lg:grid-cols-3 lg:gap-8 lg:items-start">
-    {articulos.map((art) => (
-      <div class={`rounded-2xl overflow-hidden shadow-md border border-gray-100 ${art.destacado ? 'lg:scale-105 lg:shadow-xl' : ''}`}>
-        <img src={art.imagen} alt={art.titulo} class="w-full object-cover aspect-[4/3]" />
-        <div class="p-4 bg-[#945DA7]">
+    {articulos.map((art, i) => (
+      <div
+        class={`reveal-target rounded-2xl overflow-hidden shadow-md border border-gray-100 transition-transform hover:-translate-y-1 lg:hover:-translate-y-2 ${art.destacado ? 'lg:scale-105 lg:shadow-xl' : ''}`}
+        style={`transition-delay: ${i * 120}ms`}
+      >
+        <img src={art.imagen} alt={art.titulo} class="w-full lg:w-full object-cover aspect-[4/3]" />
+        <div class="p-4 lg:p-4 bg-[#945DA7]">
           <span
-            class="inline-block text-white text-xs font-bold px-3 py-1 rounded-full mb-3 font-sans"
+            class="inline-block text-white text-xs lg:text-xs font-bold px-3 lg:px-3 py-1 lg:py-1 rounded-full mb-3 lg:mb-3 font-sans"
             style={`background-color: ${art.categoriaColor}`}
           >
             {art.categoria}
           </span>
-          <h3 class="font-bold text-base text-white mb-3 font-display leading-snug lg:text-lg">{art.titulo}</h3>
-          <a href="#" class="text-white text-sm font-display underline underline-offset-2 hover:text-white/80 transition-colors">
+          <h3 class="font-bold text-base text-white mb-3 lg:mb-3 font-display leading-snug lg:text-lg">{art.titulo}</h3>
+          <a href="#" class="text-white text-sm lg:text-sm font-display underline underline-offset-2 hover:text-white/80 transition-colors">
             Leer artículo
           </a>
         </div>
@@ -61,13 +66,13 @@ const articulos = [
   </div>
 
   <!-- Colinas amarillas inferiores -->
-  <div class="mt-8 -mx-5 lg:-mx-16 leading-none">
+  <div class="mt-16 lg:mt-24 -mx-5 lg:-mx-16 leading-none lg:leading-none">
     <!-- Móvil: 5 colinas -->
-    <svg viewBox="0 0 600 60" preserveAspectRatio="none" class="w-full h-8 lg:hidden" fill="#F8EF36">
+    <svg viewBox="0 0 600 60" preserveAspectRatio="none" class="w-full lg:w-full h-8 lg:h-8 lg:hidden" fill="#F8EF36">
       <path d="M0,60 L600,60 L600,45 C570,0 510,0 480,45 C450,0 390,0 360,45 C330,0 270,0 240,45 C210,0 150,0 120,45 C90,0 30,0 0,45 Z"/>
     </svg>
     <!-- Desktop: 12 colinas -->
-    <svg viewBox="0 0 1440 60" preserveAspectRatio="none" class="w-full h-8 hidden lg:block" fill="#F8EF36">
+    <svg viewBox="0 0 1440 60" preserveAspectRatio="none" class="w-full lg:w-full h-8 lg:h-8 hidden lg:block" fill="#F8EF36">
       <path d="M0,60 L1440,60 L1440,45 C1410,0 1350,0 1320,45 C1290,0 1230,0 1200,45 C1170,0 1110,0 1080,45 C1050,0 990,0 960,45 C930,0 870,0 840,45 C810,0 750,0 720,45 C690,0 630,0 600,45 C570,0 510,0 480,45 C450,0 390,0 360,45 C330,0 270,0 240,45 C210,0 150,0 120,45 C90,0 30,0 0,45 Z"/>
     </svg>
   </div>

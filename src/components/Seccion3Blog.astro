@@ -1,6 +1,6 @@
 ---
 ---
-<section class="bg-white pl-0 pr-6 py-10 lg:pr-16 lg:py-16">
+<section class="bg-white pl-0 lg:pl-0 pr-6 py-10 lg:pr-16 lg:py-16">
   <div class="relative overflow-hidden rounded-r-[32px] lg:rounded-r-[40px] bg-[#EC4699] pl-6 pr-6 py-10 lg:pl-16 lg:pr-16 lg:py-0 lg:min-h-[480px] lg:flex lg:items-center">
 
     <!-- Vector swirl de fondo -->
@@ -8,15 +8,15 @@
       src="/vector_blog_s3.png"
       alt=""
       aria-hidden="true"
-      class="absolute inset-0 w-full h-full object-cover pointer-events-none z-0 opacity-90"
+      class="absolute inset-0 lg:inset-0 w-full lg:w-full h-full lg:h-full object-cover pointer-events-none z-0 opacity-90"
     />
 
     <!-- Contenido: texto + formulario -->
     <div class="relative z-10 lg:w-1/2 lg:pr-10">
-      <h2 class="font-display font-light text-white text-[30px] leading-[1.1] lg:text-[48px] mb-4">
+      <h2 class="font-display font-light text-white text-[30px] leading-[1.1] lg:text-[48px] mb-4 lg:mb-4">
         Únete a la tribu
       </h2>
-      <p class="font-sans text-white text-[14px] lg:text-[16px] leading-relaxed mb-6 max-w-sm">
+      <p class="font-sans text-white text-[14px] lg:text-[16px] leading-relaxed mb-6 lg:mb-6 max-w-sm lg:max-w-sm">
         Suscríbete para recibir cada semana estrategias de negocio, hacks de maternidad y contenido que solo compartimos por correo.
       </p>
 
@@ -24,18 +24,18 @@
         data-netlify="true"
         name="newsletter-blog"
         method="POST"
-        class="flex flex-col gap-3 sm:flex-row sm:items-center max-w-md"
+        class="flex flex-col gap-3 lg:gap-3 sm:flex-row sm:items-center max-w-md lg:max-w-md"
       >
         <input
           type="email"
           name="email"
           placeholder="Tu correo electrónico"
           required
-          class="w-full sm:flex-1 bg-white rounded-full px-5 py-3 text-sm font-sans text-gray-700 outline-none placeholder-gray-400"
+          class="w-full lg:w-full sm:flex-1 bg-white rounded-full px-5 lg:px-5 py-3 lg:py-3 text-sm lg:text-sm font-sans text-gray-700 outline-none placeholder-gray-400"
         />
         <button
           type="submit"
-          class="bg-white text-[#EC4699] font-sans font-bold text-sm px-6 py-3 rounded-full whitespace-nowrap hover:opacity-90 transition-opacity"
+          class="bg-white text-[#EC4699] font-sans font-bold text-sm lg:text-sm px-6 lg:px-6 py-3 lg:py-3 rounded-full whitespace-nowrap hover:opacity-90 transition-opacity"
         >
           Quiero suscribirme
         </button>
@@ -48,7 +48,7 @@
         <img
           src="/foto_blog_s3.png"
           alt="Mamá emprendedora sonriendo"
-          class="w-full pointer-events-none"
+          class="w-full lg:w-full pointer-events-none"
         />
         <img
           src="/flor_verde.png"

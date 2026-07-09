@@ -2,17 +2,20 @@
 const invitadas = [
   { nombre: 'Lucia Aldana', descripcion: '"Mi mejor corona es ser hija de Dios"', foto: '/Lucia_Aldana.png', posicion: 'object-bottom',   nube: '/nubemorada.png', tamanoNube: 'w-72 h-72', topNube: '-top-12', leftNube: 'left-[57%] -translate-x-1/2' },
   { nombre: 'Mari Manotas', foto: '/Mari_Manotas.png', posicion: 'object-bottom', nube: '/nubenaranja.png', tamanoNube: 'w-72 h-72', topNube: '-top-16', leftNube: 'left-1/2 -translate-x-1/2' },
-  { nombre: 'Natalia Castillo', foto: '/Natalia_Castillo.png', posicion: 'object-bottom', nube: '/nuberosada.png', tamanoNube: 'w-72 h-72', topNube: '-top-12', leftNube: 'left-1/2 -translate-x-1/2' },
+  { nombre: 'Natalia Castillo', foto: '/Natalia_Castillo.png', posicion: 'object-bottom', nube: '/nuberosada_invitadas.png', tamanoNube: 'w-72 h-72', topNube: '-top-12', leftNube: 'left-1/2 -translate-x-1/2' },
 ];
+
+// Duplica cada clase con su variante lg: (mismo valor) para separar mobile/desktop explícitamente.
+const dup = (classes: string) => classes.split(' ').map((c) => `${c} lg:${c}`).join(' ');
 ---
-<section class="bg-[#E75F24] py-10 px-5 relative overflow-hidden lg:px-16 lg:pt-28 lg:pb-44">
+<section class="reveal-target bg-[#E75F24] py-10 px-5 relative overflow-hidden lg:px-16 lg:pt-28 lg:pb-44">
 
 <!-- Línea verde decorativa izquierda -->
   <img
     src="/lineaverde.png"
     alt=""
     aria-hidden="true"
-    class="absolute left-1/2 -translate-x-1/2 top-1/2 -translate-y-1/2 h-full w-auto object-contain pointer-events-none z-0"
+    class="absolute left-1/2 lg:left-1/2 -translate-x-1/2 lg:-translate-x-1/2 top-1/2 lg:top-1/2 -translate-y-1/2 lg:-translate-y-1/2 h-full lg:h-full w-auto lg:w-auto object-contain pointer-events-none z-0"
   />
 
   <!-- Estrella blanca derecha (sobre Natalia) -->
@@ -28,7 +31,7 @@ const invitadas = [
     src="/estrellablanca.png"
     alt=""
     aria-hidden="true"
-    class="hidden lg:block absolute w-[18%] h-auto object-contain z-10 lg:top-[65%] lg:left-[12%]"
+    class="hidden lg:block absolute w-[18%] lg:w-[18%] h-auto lg:h-auto object-contain z-10 lg:top-[65%] lg:left-[12%]"
   />
 
   <h2 class="font-bold text-4xl text-white mb-8 font-sans leading-tight relative z-10 lg:text-center lg:text-5xl lg:mb-12">
@@ -44,18 +47,18 @@ const invitadas = [
             src={inv.nube}
             alt=""
             aria-hidden="true"
-            class={`absolute object-contain mix-blend-multiply z-0 ${inv.tamanoNube} ${inv.topNube} ${inv.leftNube}`}
+            class={`absolute object-contain mix-blend-multiply z-0 ${dup(inv.tamanoNube)} ${dup(inv.topNube)} ${dup(inv.leftNube)}`}
           />
           <img
             src={inv.foto}
             alt={inv.nombre}
             class={`absolute inset-0 w-full h-full object-cover z-10 ${inv.posicion}`}
           />
-          <div class="absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-pink-400 to-transparent z-20 pointer-events-none"></div>
-          <div class="absolute bottom-8 left-4 z-30 px-4 py-3">
-            <h3 class="font-bold text-2xl text-white font-sans drop-shadow-md">{inv.nombre}</h3>
+          <div class="absolute inset-x-0 lg:inset-x-0 bottom-0 lg:bottom-0 h-1/2 lg:h-1/2 bg-gradient-to-t from-pink-400 to-transparent z-20 pointer-events-none"></div>
+          <div class="absolute bottom-8 lg:bottom-8 left-4 lg:left-4 z-30 px-4 lg:px-4 py-3 lg:py-3">
+            <h3 class="font-bold text-2xl lg:text-2xl text-white font-sans drop-shadow-md">{inv.nombre}</h3>
             {inv.descripcion && (
-              <p class="text-white/90 text-sm font-display drop-shadow-md">{inv.descripcion}</p>
+              <p class="text-white/90 text-sm lg:text-sm font-display drop-shadow-md">{inv.descripcion}</p>
             )}
           </div>
         </div>
@@ -64,17 +67,17 @@ const invitadas = [
   </div>
 
   <!-- Onda inferior -->
-  <div class="absolute bottom-0 left-0 w-full overflow-hidden leading-none z-10">
-    <svg viewBox="0 0 1440 120" preserveAspectRatio="none" class="w-full h-20 lg:h-32" fill="white">
+  <div class="absolute bottom-0 lg:bottom-0 left-0 lg:left-0 w-full lg:w-full overflow-hidden leading-none lg:leading-none z-10">
+    <svg viewBox="0 0 1440 120" preserveAspectRatio="none" class="w-full lg:w-full h-20 lg:h-32" fill="white">
       <path d="M0,120 L1440,120 L1440,80 C1080,-20 360,140 0,80 Z"/>
     </svg>
   </div>
 
   <!-- Botón desktop -->
-  <div class="hidden lg:flex justify-center mt-10 relative z-10">
+  <div class="hidden lg:flex justify-center mt-10 lg:mt-10 relative z-10">
     <a
       href="#"
-      class="inline-block bg-[#A9CF38] text-black font-bold py-3 px-10 rounded-full font-display tracking-wide text-sm hover:bg-[#FAED37] transition-colors"
+      class="inline-block bg-[#A9CF38] text-black font-bold py-3 lg:py-3 px-10 lg:px-10 rounded-full font-display tracking-wide lg:tracking-wide text-sm lg:text-sm hover:bg-[#FAED37] transition-colors"
     >
       Cuéntanos tu historia
     </a>

@@ -30,23 +30,23 @@ const items = [
 <section class="bg-[#945DA7] pt-32 pb-20 px-5 relative lg:pt-40 lg:pb-28 lg:px-16">
 
   <!-- Título -->
-  <div class="absolute top-28 left-0 right-0 text-center z-20 lg:top-28">
-    <span class="inline-block bg-[#EC4699] text-white font-bold text-xl px-8 py-3 rounded-full font-sans lg:text-3xl">
+  <div class="absolute top-28 left-0 lg:left-0 right-0 lg:right-0 text-center z-20 lg:top-28">
+    <span class="inline-block bg-[#EC4699] text-white font-bold text-xl px-8 lg:px-8 py-3 lg:py-3 rounded-full font-sans lg:text-3xl">
       Lo que buscamos ✨
     </span>
   </div>
 
   <!-- Micrófono (desktop) -->
   <img src="/microfono.png" alt="" aria-hidden="true"
-    class="hidden lg:block absolute top-[20%] right-[2%] w-[40%] opacity-30" />
+    class="hidden lg:block absolute top-[20%] lg:top-[20%] right-[2%] lg:right-[2%] w-[40%] lg:w-[40%] opacity-30" />
 
   <!-- Nube amarilla esquina superior derecha -->
   <img src="/nubeamarilla.png" alt="" aria-hidden="true"
-    class="hidden lg:block absolute top-[4%] right-[4%] w-[15%] z-50" />
+    class="hidden lg:block absolute top-[4%] lg:top-[4%] right-[4%] lg:right-[4%] w-[15%] lg:w-[15%] z-50" />
 
   <!-- Nube amarilla esquina inferior izquierda -->
   <img src="/nubeamarilla.png" alt="" aria-hidden="true"
-    class="hidden lg:block absolute bottom-[2%] left-[6%] w-[15%] z-50" />
+    class="hidden lg:block absolute bottom-[2%] lg:bottom-[2%] left-[6%] lg:left-[6%] w-[15%] lg:w-[15%] z-50" />
 
   <!-- Tarjeta blanca -->
   <div class="relative lg:max-w-5xl lg:mx-auto">
@@ -55,7 +55,7 @@ const items = [
       {items.map((item) => (
         <div class="text-center">
           <!-- Óvalo rosa claro + estrella -->
-          <div class="bg-[#EC4699]/20 rounded-full w-40 h-40 mx-auto mb-4 flex items-center justify-center lg:w-48 lg:h-48">
+          <div class="bg-[#EC4699]/20 rounded-full w-40 h-40 mx-auto lg:mx-auto mb-4 lg:mb-4 flex items-center justify-center lg:w-48 lg:h-48">
             <img
               src={item.estrella}
               alt=""
@@ -64,9 +64,9 @@ const items = [
               style={item.estrellaFiltro ? `filter: ${item.estrellaFiltro}` : ''}
             />
           </div>
-          <p class="font-bold text-4xl font-sans mb-3 lg:text-5xl">{item.porcentaje}</p>
+          <p class="font-bold text-4xl font-sans mb-3 lg:mb-3 lg:text-5xl">{item.porcentaje}</p>
           <span
-            class="inline-block text-white text-sm font-bold px-6 py-1 rounded-full font-sans mb-4"
+            class="inline-block text-white text-sm lg:text-sm font-bold px-6 lg:px-6 py-1 lg:py-1 rounded-full font-sans mb-4 lg:mb-4"
             style={`background-color: ${item.etiquetaColor}`}
           >
             {item.etiqueta}
@@ -79,8 +79,8 @@ const items = [
   </div>
 
   <!-- Onda blanca inferior -->
-  <div class="absolute bottom-0 left-0 w-full leading-none">
-    <svg viewBox="0 0 1440 80" preserveAspectRatio="none" class="w-full h-16" fill="white">
+  <div class="absolute bottom-0 lg:bottom-0 left-0 lg:left-0 w-full lg:w-full leading-none lg:leading-none">
+    <svg viewBox="0 0 1440 80" preserveAspectRatio="none" class="w-full lg:w-full h-16 lg:h-16" fill="white">
       <path d="M0,80 L1440,80 L1440,50 C1200,10 960,70 720,40 C480,10 240,70 0,50 Z"/>
     </svg>
   </div>
