@@ -1,62 +1,79 @@
 ---
 ---
 
-<section class="bg-white py-12 lg:py-12 px-8 lg:px-20 overflow-x-hidden">
-  <div class="flex flex-col lg:flex-row items-center gap-10 lg:gap-16 max-w-5xl lg:max-w-5xl mx-auto lg:mx-auto">
+<section class="bg-white pt-12 lg:pt-12 pb-0 lg:pb-0 px-8 lg:px-20 overflow-x-hidden relative">
+  <div class="flex flex-col lg:flex-row items-center gap-10 lg:gap-16 max-w-5xl lg:max-w-5xl mx-auto lg:mx-auto mb-14 lg:mb-16">
 
     <!-- LEFT: Foto + decorativos -->
-    <div class="relative shrink-0 w-[300px] lg:w-[300px] h-[340px] lg:h-[460px]">
+    <div class="order-2 lg:order-1 relative shrink-0 w-[300px] lg:w-[300px] h-[340px] lg:h-[460px]">
 
       <!-- Starburst verde — abajo izquierda -->
-      <img src="/estrellaverde.png" alt="" aria-hidden="true"
-           class="absolute bottom-[20px] lg:bottom-[20px] left-[-24px] lg:left-[-24px] w-[70px] lg:w-[70px] z-[1]" />
+      <img src="/estrellaverde_pequena.png" alt="" aria-hidden="true"
+           class="absolute bottom-[0px] lg:bottom-[20px] left-[-64px] lg:left-[-84px] w-[84px] lg:w-[84px] z-30" />
 
       <!-- Foto Diana con nube morada -->
-      <img src="/diana_blob.png" alt="Diana Cárdenas"
-           class="absolute bottom-[88px] lg:bottom-[-32px] left-1/2 lg:left-1/2 -translate-x-1/2 lg:-translate-x-1/2 w-[386px] lg:w-[384px] max-w-none lg:max-w-none object-contain object-bottom z-10" />
+      <img src="/diana_blob_group.png" alt="Diana Cárdenas"
+           class="absolute bottom-[-42px] lg:bottom-[-32px] left-1/2 lg:left-1/2 -translate-x-1/2 lg:-translate-x-1/2 w-[380px] lg:w-[442px] max-w-none lg:max-w-none object-contain object-bottom z-10" />
 
       <!-- Badge amarillo con micrófono — arriba izquierda, sobre el blob -->
-      <div class="absolute top-[28px] lg:top-[28px] left-[-12px] lg:left-[-12px] z-20 w-[80px] lg:w-[80px] h-[72px] lg:h-[72px]">
+      <div class="absolute top-[58px] lg:top-[58px] left-[-22px] lg:left-[-72px] z-20 w-[104px] lg:w-[104px] h-[94px] lg:h-[94px]">
         <img src="/badge_amarillo.png" alt="" aria-hidden="true" class="w-full lg:w-full h-full lg:h-full object-contain" />
         <img src="/microfono_naranja.png" alt="" aria-hidden="true"
-             class="absolute inset-0 lg:inset-0 w-[44px] lg:w-[44px] h-[44px] lg:h-[44px] m-auto lg:m-auto object-contain -translate-y-1 lg:-translate-y-1" />
+             class="absolute inset-0 lg:inset-0 w-[57px] lg:w-[57px] h-[57px] lg:h-[57px] m-auto lg:m-auto object-contain -translate-y-1 lg:-translate-y-1 -translate-x-[5px] lg:-translate-x-[5px]" />
       </div>
 
       <!-- Flor blanca — sobre el blob, a la derecha del badge -->
       <img src="/flor_pink_s2.png" alt="" aria-hidden="true"
-           class="absolute top-[72px] lg:top-[72px] left-[140px] lg:left-[140px] w-[30px] lg:w-[30px] z-20 brightness-0 invert" />
+           class="absolute top-[122px] lg:top-[142px] left-[240px] lg:left-[260px] w-[40px] lg:w-[60px] z-20 brightness-0 invert" />
 
       <!-- Etiqueta "Madre y empresaria" -->
-      <div class="absolute bottom-[10px] lg:bottom-[10px] right-[-24px] lg:right-[-24px] z-20 w-[130px] lg:w-[130px] h-[130px] lg:h-[130px]">
-        <img src="/nuberosada.png" alt="" aria-hidden="true" class="absolute inset-0 lg:inset-0 w-full lg:w-full h-full lg:h-full object-contain" />
-        <p class="absolute inset-0 lg:inset-0 flex items-center justify-center text-center font-sans font-semibold text-white text-[11px] lg:text-[11px] leading-tight lg:leading-tight px-2 lg:px-2">Madre y<br/>empresaria</p>
+      <div class="absolute bottom-[-90px] lg:bottom-[-70px] right-[-54px] lg:right-[-114px] z-20 w-[186px] lg:w-[242px] h-[186px] lg:h-[242px]">
+        <img src="/forma_pink_s4.png" alt="" aria-hidden="true" class="absolute inset-0 lg:inset-0 w-full lg:w-full h-full lg:h-full object-contain" />
+        <p class="absolute inset-0 lg:inset-0 flex items-center justify-center text-center font-sans font-semibold text-white text-[11px] lg:text-[14px] leading-tight lg:leading-tight px-2 lg:px-2">Madre y<br/>empresaria</p>
       </div>
 
     </div>
 
     <!-- RIGHT: Cita + nombre -->
-    <div class="flex-1 relative">
+    <div class="order-1 lg:order-2 flex-1 relative">
 
       <!-- Círculos decorativos -->
-      <div class="absolute -top-7 lg:-top-7 right-8 lg:right-8 w-[70px] lg:w-[70px] h-[70px] lg:h-[70px] rounded-full bg-[#A9CF38] z-0"></div>
-      <div class="absolute top-[28px] lg:top-[28px] right-0 lg:right-0 w-[26px] lg:w-[26px] h-[26px] lg:h-[26px] rounded-full bg-[#945DA7] z-0"></div>
-      <div class="absolute -bottom-6 lg:-bottom-6 right-[58px] lg:right-[58px] w-[38px] lg:w-[38px] h-[38px] lg:h-[38px] rounded-full bg-[#945DA7] z-0"></div>
-      <div class="absolute -bottom-9 lg:-bottom-9 right-[14px] lg:right-[14px] w-[20px] lg:w-[20px] h-[20px] lg:h-[20px] rounded-full bg-[#945DA7] z-0"></div>
+      <div class="absolute -top-7 lg:-top-7 right-[-40px] lg:right-[-40px] w-[84px] lg:w-[84px] h-[84px] lg:h-[84px] rounded-full bg-[#A9CF38] z-0"></div>
+      <div class="absolute -top-7 lg:-top-7 right-[-45px] lg:right-[-45px] w-[25px] lg:w-[25px] h-[25px] lg:h-[25px] rounded-full bg-[#A9CF38] z-0"></div>
+      <div class="absolute bottom-[52px] lg:bottom-[52px] right-[-30px] lg:right-[-30px] w-[70px] lg:w-[70px] h-[70px] lg:h-[70px] rounded-full bg-[#945DA7] z-0"></div>
+      <div class="absolute bottom-[52px] lg:bottom-[52px] right-[-31px] lg:right-[-31px] w-[21px] lg:w-[21px] h-[21px] lg:h-[21px] rounded-full bg-[#945DA7] z-0"></div>
 
       <!-- Burbuja de cita rosa -->
       <div class="relative bg-[#EC4699] rounded-[24px] lg:rounded-[24px] px-7 py-6 lg:px-8 lg:py-7 z-10">
         <p class="font-sans text-white text-[15px] lg:text-[17px] leading-relaxed">
           "El episodio quedó espectacular y la edición es muy linda. Todo se ve tan profesional que la gente ha llegado a mi tienda a comprar más, felicitándome por lo bien que se veía todo. Incluso quedé con ganas de patrocinar otros episodios."
         </p>
+
+        <!-- Cola de la burbuja, apuntando hacia la foto de Diana (móvil: abajo, desktop: izquierda) -->
+        <div class="lg:hidden absolute -bottom-[22px] left-1/2 -translate-x-1/2 w-0 h-0 border-l-[22px] border-l-transparent border-r-[22px] border-r-transparent border-t-[24px] border-t-[#EC4699]"></div>
+        <div class="hidden lg:block absolute top-1/2 -translate-y-1/2 -left-[22px] w-0 h-0 border-t-[22px] border-t-transparent border-b-[22px] border-b-transparent border-r-[24px] border-r-[#EC4699]"></div>
       </div>
 
-      <!-- Nombre y cargo -->
-      <div class="mt-5 lg:mt-6 pl-2 lg:pl-2 relative z-10">
-        <p class="font-sans font-bold text-gray-800 text-[18px] lg:text-[22px] leading-tight">Diana Cárdenas</p>
-        <p class="font-sans text-gray-500 text-[14px] lg:text-[16px] mt-1 lg:mt-1">Dueña de Diana Nice</p>
+      <!-- Nombre y cargo (desktop, dentro de la columna de la cita) -->
+      <div class="hidden lg:block mt-6 pl-2 relative z-10">
+        <p class="font-sans font-bold text-gray-800 text-[22px] leading-tight">Diana Cárdenas</p>
+        <p class="font-sans text-gray-500 text-[16px] mt-1">Dueña de Diana Nice</p>
       </div>
 
     </div>
 
+    <!-- Nombre y cargo (móvil, al final después de la foto) -->
+    <div class="order-3 lg:hidden mt-5 pl-2 relative z-10 w-full">
+      <p class="font-sans font-bold text-gray-800 text-[18px] leading-tight">Diana Cárdenas</p>
+      <p class="font-sans text-gray-500 text-[14px] mt-1">Dueña de Diana Nice</p>
+    </div>
+
+  </div>
+
+  <!-- Transición onda naranja hacia Seccion5 -->
+  <div class="-mx-8 lg:-mx-20">
+    <svg viewBox="0 0 1440 120" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" class="w-full h-[60px] lg:h-[100px] block">
+      <path d="M0,45 C240,100 380,100 550,40 C720,-10 850,-5 1000,50 C1100,90 1250,90 1440,50 L1440,120 L0,120 Z" fill="#E75F24"/>
+    </svg>
   </div>
 </section>
